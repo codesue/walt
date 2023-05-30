@@ -1,0 +1,13 @@
+site_name: Walt
+site_description: A minimal theme for MkDocs
+copyright: © 2023 Suzen Fylke
+nav:
+  - index.md
+  - reference.md
+  - Install: "https://pypi.org/project/mkdocs-walt/"
+  - Source: "https://github.com/codesue/walt/tree/main/mkdocs-walt"
+theme:
+  name: walt
+  site_emoji: 📚
+watch:
+  - ../../mkdocs-walt  # for developing and testing the theme

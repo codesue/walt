@@ -1,0 +1,1 @@
+"""Walt theme for MkDocs."""

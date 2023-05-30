@@ -1,0 +1,348 @@
+/*!
+ * Extensively uses portions of Writ v1.0.4, which is licensed as follows:
+ * Copyright © 2015, Curtis McEnroe <curtis@cmcenroe.me>
+ * https://cmcenroe.me/writ/LICENSE (ISC)
+ */
+
+:root {
+  /* fonts */
+  --font-family: Palatino, Georgia, Lucida Bright, Book Antiqua, serif;
+  --font-family-monospace: Consolas, Liberation Mono, Menlo, Courier, monospace;
+  --font-size: 16px;
+  --font-size-small: 0.833rem;
+  --font-weight-bold: 600;
+  --font-weight-heading: 400;
+  --line-height: 1.5rem;
+  /* colors */
+  --color-background: hsl(0, 0%, 100%);
+  --color-text: hsl(0, 0%, 13%);
+  --color-secondary-text: hsl(0, 0, 61%);
+  --color-link: hsl(240, 100%, 46%);
+  --color-link-visited: hsl(273, 100%, 37%);
+  --color-code-background: rgba(0, 0, 0, 0.05);
+  --color-code-text: hsl(0, 0%, 7%);
+  --color-highlight: hsla(54, 100%, 62%, 0.4);
+  --color-highlight-deep: hsla(54, 100%, 62%, 0.9);
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-table-border: hsl(0, 0%, 86%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: hsl(232, 23%, 18%);
+    --color-text: hsl(227, 68%, 88%);
+    --color-secondary-text: hsl(228, 39%, 80%);
+    --color-link: hsl(217, 92%, 76%);
+    --color-link-visited: hsl(232, 97%, 85%);
+    --color-code-background: hsl(230, 19%, 26%);
+    --color-code-text: hsl(227, 68%, 88%);
+    --color-highlight: hsla(355, 71%, 77%, 0.4);
+    --color-highlight-deep: hsla(355, 71%, 77%, 0.6);
+    --color-border: hsl(231, 16%, 34%);
+    --color-table-border: hsl(228, 39%, 80%);
+  }
+
+  img {
+    filter: brightness(.8) contrast(1.2);
+  }
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout */
+
+html, body {
+  height: 100%;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+html {
+  overflow-y: auto;
+}
+
+body {
+  max-width: 40;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+body > header {
+  text-align: center;
+  margin-top: 5em;
+}
+
+main, body > footer {
+  display: block;
+  max-width: 78ch;
+  margin: auto;
+}
+
+main figure, main aside {
+  float: right;
+  margin: 1.5rem 0 0 1ch;
+}
+
+main aside {
+  max-width: 26ch;
+  border: solid var(--color-code-background);
+  border-width: 0 0 0 0.5ch;
+  padding: 0 0 0 0.5ch;
+}
+
+body > footer {
+  position: sticky;
+  top: 100vh;
+}
+
+footer {
+  margin-top: 3em;
+  padding-bottom: 3em;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+}
+nav ul li {
+  display: inline;
+  padding-left: 1ch;
+  white-space: nowrap;
+}
+
+nav ul li:first-child {
+  padding-left: 0;
+}
+
+/* Spacing */
+
+p, ul, ol, dl, table, blockquote, pre, h1, h2, h3, h4, h5, h6 {
+  margin: 1.5rem 0 0 0;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  margin: 0;
+}
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6, th, .site-name {
+  font-weight: var(--font-weight-heading);
+}
+
+h1, h2, h3, .site-name {
+  line-height: 3rem;
+}
+
+header + main h1 {
+  margin-top: 1.5rem;
+  font-size: 2.284em;
+}
+
+h1, .site-name {
+  font-size: 2.488em;
+  margin-top: 2em;
+}
+
+h2 {
+  font-size: 2.074em;
+}
+
+h3 {
+  font-size: 1.728em;
+}
+
+h4 {
+  font-size: 1.44em;
+}
+
+h5 {
+  font-size: 1.2em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+small {
+  font-size: 0.833em;
+}
+
+/* Links */
+a { text-decoration: none; }
+
+a, header nav a:visited, a code {
+  color: var(--color-link);
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+a:visited, a:visited code {
+  color: var(--color-link-visited);
+}
+
+/* Copy inline */
+
+sup, sub {
+  font-size: 0.75em;
+  line-height: 1em;
+}
+
+ins {
+  border: solid var(--color-code-background);
+  border-width: 1px;
+  padding: 1px;
+  text-decoration: none;
+}
+
+mark {
+  color: inherit;
+  background-color: var(--color-highlight-deep);
+  padding: 1px;
+}
+
+/* Copy blocks */
+
+blockquote {
+  margin-right: 3ch;
+  margin-left: 1.5ch;
+  border: solid var(--color-code-background);
+  border-width: 0 0 0 0.5ch;
+  padding: 0 0 0 1ch;
+}
+
+/* Pre-formatted text */
+
+code, pre, samp, kbd {
+  color: var(--color-code-text); 
+  font-family: var(--font-family-monospace);
+  font-size: var(--font-size-small);
+}
+
+code, pre, samp {
+  background-color: var(--color-code-background);
+  border: solid var(--color-border);
+}
+
+p code, p samp {
+  border-width: 1px;
+  border-radius: 2px;
+  padding: 0.1em 0.2em;
+  white-space: nowrap;
+}
+
+pre code {
+  border: none;
+  background-color: transparent;
+  white-space: inherit;
+}
+
+pre {
+  margin-top: calc(1.5rem - 1px);
+  margin-bottom: -1px;
+  border-width: 1px;
+  border-radius: 2px;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+kbd { font-weight: var(--font-weight-bold); }
+
+/* Lists */
+
+ul, ol, dd {
+  padding: 0 0 0 3ch;
+}
+
+dd {
+  margin: 0;
+}
+
+ul > li {
+  list-style-type: disc;
+}
+
+li ul > li {
+  list-style-type: circle;
+}
+
+li li ul > li {
+  list-style-type: square;
+}
+
+ol > li {
+  list-style-type: decimal;
+}
+
+li ol > li {
+  list-style-type: lower-roman;
+}
+
+li li ol > li {
+  list-style-type: lower-alpha;
+}
+
+/* Tables */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+  line-height: calc(1.5rem - 1px);
+  margin-bottom: -1px;
+}
+
+thead, tfoot {
+  background-color: var(--color-code-background);
+}
+
+th, td {
+  padding: 0 0.5ch;
+  border: solid var(--color-table-border);
+  border-width: 1px;
+}
+
+/* Thematic break (horizontal rule) */
+hr {
+  border: 0;
+  margin: 2em 0;
+}
+
+hr::after {
+  content: '* * *';
+  display: block;
+  width: 100%;
+  color: var(--secondary-text-color);
+  text-align: center;
+  font-family: var(--font-family-monospace);
+}
+
+/* Images */
+
+img { max-width: 100%; }
+
+/* Misc */
+
+/* See https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

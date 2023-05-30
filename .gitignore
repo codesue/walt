@@ -1,0 +1,72 @@
+# MacOS
+**/.DS_Store
+
+# IDEs
+.idea/*
+.vscode/*
+
+# Virtual environments
+.venv/*
+env/*
+**/env
+**/venv
+
+# pyenv
+.python-version
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# mkdocs documentation
+**/site/
+
+# Sphinx documentation
+docs/_build/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+**/*.py[cod]
+**/*$py.class
+
+# C extensions
+**/*.so

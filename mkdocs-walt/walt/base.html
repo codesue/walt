@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="{{ config.theme.locale }}">
+  <head>
+    {%- block site_meta %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title or config.site_name }}</title>
+    {% if config.site_description %}<meta name="description" content="{{ config.site_description }}">{% endif %}
+    {% if config.site_author %}<meta name="author" content="{{ config.site_author }}">{% endif %}
+    {% if page and page.canonical_url %}<link rel="canonical" href="{{ page.canonical_url }}">{% endif %}
+
+    {% if config.site_favicon %}<link rel="shortcut icon" href="{{ config.site_favicon|url }}">
+    {% else %}<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{{ config.theme.site_emoji }}</text></svg>">{% endif %}
+
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="{{ config.theme.theme_color }}" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="{{ config.theme.theme_color_dark }}" media="(prefers-color-scheme: dark)">
+    {%- endblock %}
+
+    {%- block styles %}
+    <link rel="stylesheet" href="{{ "styles.css"|url }}">
+    {%- if config.theme.highlightjs %}
+    <link rel="stylesheet" href="//unpkg.com/@catppuccin/highlightjs/css/catppuccin-macchiato.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="//unpkg.com/@catppuccin/highlightjs/css/catppuccin-latte.css" media="(prefers-color-scheme: light)">
+    <style>
+      .hljs, code.hljs { background: unset; }
+      code .hljs-comment { color: var(--color-secondary-text); }
+    </style>
+    {%- endif %}
+    {% for path in config.extra_css %}
+    <link href="{{ path|url }}" rel="stylesheet">
+    {% endfor %}
+    {%- endblock %}
+
+    {%- block libs %}
+    {%- if config.theme.highlightjs %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    {%- for lang in config.theme.hljs_languages %}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/{{lang}}.min.js"></script>
+    {%- endfor %}
+    <script>hljs.initHighlightingOnLoad();</script>
+    {%- endif %}
+    {%- endblock %}
+
+    {%- block extrahead %} {% endblock %}
+  </head>
+  <body>
+    <a href="#skip" class="visually-hidden">Skip to main content</a>
+    {%- block header %}
+    {%- if config.theme.include_header %}
+    <header>
+      <span class="site-name">{{ config.site_name }}</span>
+      {% if config.site_description %}<p>{{ config.site_description }}</p>{% endif %}
+      <nav>
+        <h2 class="visually-hidden">Top level navigation menu</h2>
+        <ul>
+          {%- for nav_item in nav %}
+          <li><a href="{{ nav_item.url|url }}">{{ nav_item.title }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+    </header>
+    {%- endif %}
+    {%- endblock %}
+    {%- block main %}
+    <main id="skip">
+      {{ page.content }}
+    </main>
+    {%- endblock %}
+    {%- block footer %}
+    <footer>
+      {%- if config.copyright %}
+      <p>{{ config.copyright }}</p>
+      {%- endif %}
+    </footer>
+    {%- endblock %}
+
+    {%- block scripts %}
+    {% for path in config.extra_javascript %}
+    <script src="{{ path|url }}"></script>
+    {% endfor %}
+    {%- endblock %}
+  </body>
+</html>
