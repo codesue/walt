@@ -3,7 +3,11 @@ name: Publish Docs
 
 on:
   push:
-    branches: ["main"]
+    paths:
+      - "examples/mkdocs/**"
+      - "mkdocs-walt/setup.py"
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
