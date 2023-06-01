@@ -237,7 +237,7 @@ code, pre, samp {
   border: solid var(--color-border);
 }
 
-p code, p samp {
+p code, li code, p samp {
   border-width: 1px;
   border-radius: 2px;
   padding: 0.1em 0.2em;
