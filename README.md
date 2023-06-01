@@ -5,12 +5,9 @@
 [![GitHub][github_badge]][github_link]
 [![Docs][docs_badge]][docs_link]
 
-🍃 Walt is a minimal documentation theme based on [writ.css](https://writ.cmcenroe.me).
-
+Walt is a minimal documentation theme based on [writ.css](https://writ.cmcenroe.me).
 It features classless styles for semantic HTML and supports light and dark mode
 based on system settings.
-
-Walt is available as an [MkDocs theme](#mkdocs-theme) that you can install from PyPI.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/images/mkdocs-walt-dark.png" />
@@ -19,44 +16,21 @@ Walt is available as an [MkDocs theme](#mkdocs-theme) that you can install from 
 
 ## MkDocs theme
 
-The Walt theme for MkDocs features:
+Walt is available as an MkDocs theme that features:
 
 - classless styles for semantic HTML based on [writ.css](https://writ.cmcenroe.me)
 - light mode and dark mode based on system settings
 - an emoji favicon for browsers that support svg site icons
 - code syntax highlighting using highlight.js
 
-### Installation
+You can install it from PyPI using:
 
 ```sh
 pip install mkdocs-walt
 ```
 
-### Usage
-
-Create a new MkDocs project with the `mkdocs` CLI and add the following your
-project's `mkdocs.yml`:
-
-```yaml
-theme:
-  name: walt
-```
-
-See the [end to end example](https://github.com/codesue/walt/tree/main/examples/mkdocs).
-
-### Defaults
-
-Walt sets the following configurations by default:
-
-```yaml
-site_emoji: 🍃
-locale: en
-theme_color: "hsl(0, 0%, 100%)"
-theme_color_dark: "hsl(232, 23%, 18%)"
-include_header: true
-include_nav: true
-highlightjs: true
-```
+See the [`mkdocs-walt`](https://github.com/codesue/walt/blob/main/mkdocs-walt)
+directory to learn how to install and use Walt in your MkDocs projects.
 
 ### Developing mkdocs-walt
 
