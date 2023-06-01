@@ -1,20 +1,61 @@
-# walt: a minimal documentation theme
+# walt
 
-[![GitHub][github_badge]][github_link]
+[![License][license_badge]][license_link]
 [![PyPI][pypi_badge]][pypi_link]
+[![GitHub][github_badge]][github_link]
+[![Docs][docs_badge]][docs_link]
 
-[github_badge]: https://badgen.net/badge/icon/GitHub?icon=github&color=black&label
-[github_link]: https://github.com/codesue/walt
+🍃 Walt is a minimal documentation theme based on [writ.css](https://writ.cmcenroe.me).
 
-[pypi_badge]: https://badgen.net/pypi/v/mkdocs-walt?icon=pypi&color=black&label
-[pypi_link]: https://pypi.org/project/mkdocs-walt
+It features classless styles for semantic HTML and supports light and dark mode
+based on system settings.
 
-Walt is a minimal documentation theme that is best suited for single page websites.
+Walt is available as an [MkDocs theme](#mkdocs-theme) that you can install from PyPI.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/images/mkdocs-walt-dark.png" />
+  <img src="assets/images/mkdocs-walt-light.png" alt="Screenshot of the Walt website" />
+</picture>
 
 ## MkDocs theme
 
-Walt is available as an MkDocs theme. See [mkdocs-walt](mkdocs-walt) to learn how
-to install and use `mkdocs-walt` in your MkDocs projects.
+The Walt theme for MkDocs features:
+
+- classless styles for semantic HTML based on [writ.css](https://writ.cmcenroe.me)
+- light mode and dark mode based on system settings
+- an emoji favicon for browsers that support svg site icons
+- code syntax highlighting using highlight.js
+
+### Installation
+
+```sh
+pip install mkdocs-walt
+```
+
+### Usage
+
+Create a new MkDocs project with the `mkdocs` CLI and add the following your
+project's `mkdocs.yml`:
+
+```yaml
+theme:
+  name: walt
+```
+
+See the [end to end example](https://github.com/codesue/walt/tree/main/examples/mkdocs).
+
+### Defaults
+
+Walt sets the following configurations by default:
+
+```yaml
+site_emoji: 🍃
+locale: en
+theme_color: "hsl(0, 0%, 100%)"
+theme_color_dark: "hsl(232, 23%, 18%)"
+include_header: true
+highlightjs: true
+```
 
 ### Developing mkdocs-walt
 
@@ -41,7 +82,7 @@ mkdocs serve
 pip install "clementine[rind]"
 ```
 
-2. Build the package and verify the build:
+2. With `walt/mkdocs-walt` as your working directory, build the package and verify the build:
 
 ```sh
 python -m build
@@ -67,6 +108,10 @@ pip install -i https://test.pypi.org/simple/ mkdocs-walt
 twine upload dist/*
 ```
 
+## License
+
+Copyright &copy; 2023 [Suzen Fylke](https://suzenfylke.com). Distributed under the MIT License.
+
 ## Acknowledgements
 
 Walt uses [writ.css](https://github.com/programble/writ/tree/master) for styles
@@ -74,3 +119,15 @@ and examples use [writ's reference html page](https://github.com/programble/writ
 
 Walt also uses [Catppuccin](https://github.com/catppuccin/catppuccin) for code
 block syntax highlighting and dark mode color palettes.
+
+[license_badge]: https://img.shields.io/github/license/codesue/walt?colorA=363a4f&colorB=b7bdf8&style=flat
+[license_link]: https://github.com/codesue/walt/tree/main/LICENSE
+
+[pypi_badge]: https://img.shields.io/pypi/v/mkdocs-walt?colorA=363a4f&colorB=b7bdf8&style=flat
+[pypi_link]: https://pypi.org/project/mkdocs-walt
+
+[github_badge]: https://img.shields.io/github/stars/codesue/walt?colorA=363a4f&colorB=b7bdf8&style=flat
+[github_link]: https://github.com/codesue/walt
+
+[docs_badge]: https://img.shields.io/github/actions/workflow/status/codesue/walt/publish-docs.yml?label=docs&colorA=363a4f&colorB=b7bdf8&style=flat
+[docs_link]: https://github.com/codesue/walt/actions/workflows/publish-docs.yml

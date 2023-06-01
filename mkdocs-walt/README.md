@@ -9,6 +9,11 @@ It has the following features:
 - an emoji favicon for browsers that support svg site icons
 - code syntax highlighting using highlight.js
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/codesue/walt/tree/main/assets/images/mkdocs-walt-dark.png" />
+  <img src="https://github.com/codesue/walt/tree/main/assets/images/mkdocs-walt-light.png" alt="Screenshot of the Walt website" />
+</picture>
+
 ## Installation
 
 ```sh
@@ -25,7 +30,7 @@ theme:
   name: walt
 ```
 
-See the [full usage example](https://github.com/codesue/walt/examples/mkdocs).
+See the [end to end example](https://github.com/codesue/walt/tree/main/examples/mkdocs).
 
 ## Defaults
 
@@ -39,6 +44,10 @@ theme_color_dark: "hsl(232, 23%, 18%)"
 include_header: true
 highlightjs: true
 ```
+
+## License
+
+Copyright &copy; 2023 [Suzen Fylke](https://suzenfylke.com). Distributed under the MIT License.
 
 ## Acknowledgements
 

@@ -1,10 +1,15 @@
 # About
 
-🍃 Walt is a minimal documentation theme best suited for single page websites
+🍃 Walt is a minimal documentation theme based on [writ.css](https://writ.cmcenroe.me).
+
+It features classless styles for semantic HTML and supports light and dark mode
+based on system settings.
+
+Walt is available as an [MkDocs theme](#mkdocs-theme`) that you can install from PyPI.
 
 ## MkDocs theme
 
-Walt is available as an MkDocs theme that features:
+The Walt theme for MkDocs features:
 
 - classless styles for semantic HTML based on [writ.css](https://writ.cmcenroe.me)
 - light mode and dark mode based on system settings
@@ -41,6 +46,10 @@ theme_color_dark: "hsl(232, 23%, 18%)"
 include_header: true
 highlightjs: true
 ```
+
+## License
+
+Copyright &copy; 2023 [Suzen Fylke](https://suzenfylke.com). Distributed under the MIT License.
 
 ## Acknowledgements
 
