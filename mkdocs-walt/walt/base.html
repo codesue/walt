@@ -51,6 +51,7 @@
     <header>
       <span class="site-name">{{ config.site_name }}</span>
       {% if config.site_description %}<p>{{ config.site_description }}</p>{% endif %}
+      {%- if config.theme.include_nav %}
       <nav>
         <h2 class="visually-hidden">Top level navigation menu</h2>
         <ul>
@@ -59,6 +60,7 @@
           {%- endfor %}
         </ul>
       </nav>
+      {%- endif %}
     </header>
     {%- endif %}
     {%- endblock %}

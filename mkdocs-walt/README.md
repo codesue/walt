@@ -42,6 +42,7 @@ locale: en
 theme_color: "hsl(0, 0%, 100%)"
 theme_color_dark: "hsl(232, 23%, 18%)"
 include_header: true
+include_nav: true
 highlightjs: true
 ```
 
