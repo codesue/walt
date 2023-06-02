@@ -10,8 +10,8 @@ It has the following features:
 - code syntax highlighting using highlight.js
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/codesue/walt/tree/main/assets/images/mkdocs-walt-dark.png" />
-  <img src="https://github.com/codesue/walt/tree/main/assets/images/mkdocs-walt-light.png" alt="Screenshot of the Walt website" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/codesue/walt/main/assets/images/mkdocs-walt-dark.png" />
+  <img src="https://raw.githubusercontent.com/codesue/walt/main/assets/images/mkdocs-walt-light.png" alt="Screenshot of the Walt website" />
 </picture>
 
 ## Installation
