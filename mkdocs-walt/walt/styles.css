@@ -235,11 +235,11 @@ code, pre, samp, kbd {
 code, pre, samp {
   background-color: var(--color-code-background);
   border: solid var(--color-border);
-}
-
-p code, li code, p samp {
   border-width: 1px;
   border-radius: 2px;
+}
+
+code, samp {
   padding: 0.1em 0.2em;
   white-space: nowrap;
 }
@@ -253,8 +253,6 @@ pre code {
 pre {
   margin-top: calc(1.5rem - 1px);
   margin-bottom: -1px;
-  border-width: 1px;
-  border-radius: 2px;
   padding: 1em;
   overflow-x: auto;
 }
