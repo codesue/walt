@@ -20,8 +20,8 @@
     {%- block styles %}
     <link rel="stylesheet" href="{{ "styles.css"|url }}">
     {%- if config.theme.highlightjs %}
-    <link rel="stylesheet" href="//unpkg.com/@catppuccin/highlightjs/css/catppuccin-macchiato.css" media="(prefers-color-scheme: dark)">
-    <link rel="stylesheet" href="//unpkg.com/@catppuccin/highlightjs/css/catppuccin-latte.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="{{ "highlightjs/catppuccin-macchiato.min.css"|url }}" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="{{ "highlightjs/catppuccin-latte.min.css"|url }}" media="(prefers-color-scheme: light)">
     <style>
       .hljs, code.hljs { background: unset; }
       code .hljs-comment { color: var(--color-secondary-text); }
@@ -34,7 +34,7 @@
 
     {%- block libs %}
     {%- if config.theme.highlightjs %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script src="{{ "highlightjs/highlight.min.js"|url }}"></script>
     {%- for lang in config.theme.hljs_languages %}
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/{{lang}}.min.js"></script>
     {%- endfor %}
