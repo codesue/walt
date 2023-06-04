@@ -23,7 +23,6 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  source-dir: examples/mkdocs  # The directory containing the MkDocs configuration file
   output-dir: site  # The directory containing the generated site
 
 jobs:
@@ -44,12 +43,11 @@ jobs:
           pip install --upgrade pip
           pip install --upgrade mkdocs-walt
       - name: Build with MkDocs
-        working-directory: ${{ env.source-dir }}
         run: mkdocs build -d ${{ env.output-dir }} --verbose --clean --strict
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ${{ env.source-dir }}/${{ env.output-dir }}
+          path: ${{ env.output-dir }}
 
   # Deployment to GitHub Pages
   deploy:

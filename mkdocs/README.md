@@ -27,7 +27,7 @@ theme:
   name: walt
 ```
 
-See the [end to end example](https://github.com/codesue/walt/tree/main/examples/mkdocs).
+See the end to end example in the [project's repository](https://github.com/codesue/walt/).
 
 ## Defaults
 
@@ -49,6 +49,6 @@ Copyright &copy; 2023 [Suzen Fylke](https://suzenfylke.com). Distributed under t
 
 ## Acknowledgements
 
-Walt uses [writ.css](https://github.com/programble/writ/tree/master) for styles
+Walt uses [writ.css](https://github.com/programble/writ/) for styles
 and [Catppuccin](https://github.com/catppuccin/catppuccin) for code block syntax
 highlighting and dark mode color palettes.

@@ -63,7 +63,7 @@ Copyright &copy; 2023 [Suzen Fylke](https://suzenfylke.com). Distributed under t
 
 ## Acknowledgements
 
-Walt uses [writ.css](https://github.com/programble/writ/tree/master) for styles
+Walt uses [writ.css](https://github.com/programble/writ/) for styles
 and examples use [writ's reference html page](https://github.com/programble/writ/blob/master/reference.html).
 
 Walt also uses [Catppuccin](https://github.com/catppuccin/catppuccin) for code

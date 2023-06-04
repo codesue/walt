@@ -1,0 +1,12 @@
+site_name: Walt
+site_description: A minimal documentation theme
+copyright: © 2023 Suzen Fylke
+nav:
+  - index.md
+  - reference.md
+  - Source: "https://github.com/codesue/walt/"
+theme:
+  name: walt
+  site_emoji: 📚
+watch:
+  - mkdocs  # for developing and testing the theme
