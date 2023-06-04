@@ -5,7 +5,7 @@ on:
   push:
     paths:
       - "examples/mkdocs/**"
-      - "mkdocs-walt/setup.py"
+      - "mkdocs/setup.py"
     branches:
       - main
   workflow_dispatch:

@@ -29,7 +29,7 @@ You can install it from PyPI using:
 pip install mkdocs-walt
 ```
 
-See the [`mkdocs-walt`](https://github.com/codesue/walt/blob/main/mkdocs-walt)
+See the [`mkdocs`](https://github.com/codesue/walt/blob/main/mkdocs)
 directory to learn how to install and use Walt in your MkDocs projects.
 
 ### Developing mkdocs-walt
@@ -38,14 +38,14 @@ directory to learn how to install and use Walt in your MkDocs projects.
 
 ```sh
 git clone https://github.com/codesue/walt.git
-cd walt/mkdocs-walt
+cd walt/mkdocs
 pip install -e .
 ```
 
 #### Running the example
 
 ```
-cd ../examples/mkdocs  # if your current working directory is walt/mkdocs-walt
+cd ../examples/mkdocs  # if your current working directory is walt/mkdocs
 mkdocs serve
 ```
 
@@ -57,7 +57,7 @@ mkdocs serve
 pip install "clementine[rind]"
 ```
 
-2. With `walt/mkdocs-walt` as your working directory, build the package and verify the build:
+2. With `walt/mkdocs` as your working directory, build the package and verify the build:
 
 ```sh
 python -m build
@@ -74,7 +74,7 @@ Install the package from TestPYPI in a clean virtual environment and confirm
 that the example runs as expected:
 
 ```sh
-pip install -i https://test.pypi.org/simple/ mkdocs-walt
+pip install -i https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ mkdocs-walt
 ```
 
 4. Upload the package to PyPI:

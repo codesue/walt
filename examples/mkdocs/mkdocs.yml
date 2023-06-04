@@ -5,9 +5,9 @@ nav:
   - index.md
   - reference.md
   - Install: "https://pypi.org/project/mkdocs-walt/"
-  - Source: "https://github.com/codesue/walt/tree/main/mkdocs-walt"
+  - Source: "https://github.com/codesue/walt/tree/main/mkdocs"
 theme:
   name: walt
   site_emoji: 📚
 watch:
-  - ../../mkdocs-walt  # for developing and testing the theme
+  - ../../mkdocs  # for developing and testing the theme
