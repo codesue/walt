@@ -1,4 +1,4 @@
-<!-- Extensively uses portions of the Writ v1.0.4 html reference, which is 
+<!-- Extensively uses portions of the Writ v1.0.4 html reference, which is
 licensed as follows:
 Copyright © 2015, Curtis McEnroe <curtis@cmcenroe.me>
 https://cmcenroe.me/writ/LICENSE (ISC)
