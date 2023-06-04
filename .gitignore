@@ -70,3 +70,10 @@ __pycache__/
 
 # C extensions
 **/*.so
+
+# Dependencies
+package-lock.json
+node_modules/
+
+# Optional stylelint cache
+.stylelintcache

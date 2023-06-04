@@ -1,0 +1,40 @@
+{
+  "name": "walt.css",
+  "version": "0.2.0-dev",
+  "author": "Suzen Fylke",
+  "description": "A minimal documentation theme",
+  "keywords": [
+    "css",
+    "documentation",
+    "minimal",
+    "theme"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codesue/walt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codesue/walt/issues"
+  },
+  "homepage": "https://github.com/codesue/walt#readme",
+  "main": "walt.css",
+  "style": "walt.css",
+  "files": [
+    "LICENSE",
+    "walt.css"
+  ],
+  "scripts": {
+    "test": "stylelint walt.css --fix",
+    "build-mkdocs": "cleancss -o mkdocs/walt/walt.min.css walt.css",
+    "dev-mkdocs": "npm run build-mkdocs -- --watch -O0"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "stylelint": "^15.6.3",
+    "stylelint-config-standard": "^33.0.0"
+  }
+}
