@@ -15,7 +15,7 @@ based on system settings.
   <img src="assets/images/mkdocs-walt-light.png" alt="Screenshot of the Walt website" />
 </picture>
 
-## Walt.css
+## Stylesheet
 
 You can include the Walt stylesheet in your project in the following ways:
 
@@ -35,6 +35,35 @@ You can include the Walt stylesheet in your project in the following ways:
   <link rel="stylesheet" href="https://unpkg.com/walt.css/walt.css" />
   ```
 
+### Code syntax highlighting
+
+For code syntax highlighting in Walt, I recommend using [highlight.js](https://github.com/highlightjs/highlight.js) with [Catppuccin palettes](https://github.com/catppuccin/highlightjs).
+Use Macchiato for the dark color scheme and Latte for the light color scheme.
+For example, you may add the following to your HTML files:
+
+```html
+<link rel="stylesheet" href="//unpkg.com/@catppuccin/highlightjs/css/catppuccin-macchiato.css" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="//unpkg.com/@catppuccin/highlightjs/css/catppuccin-latte.css" media="(prefers-color-scheme: light)">
+```
+
+In a stylesheet or style tag, unset the background in code blocks styled by
+highlight.js to maintain uniform background colors in code blocks and inline code:
+
+```css
+.hljs,
+code.hljs {
+  background: unset;
+}
+```
+
+You may also want to update the text color of comments if they no longer have enough
+contrast with their backgrounds:
+
+```css
+code .hljs-comment {
+  color: var(--color-secondary-text);
+}
+```
 ## MkDocs theme
 
 Walt is available as an MkDocs theme that features:

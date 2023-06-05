@@ -4,6 +4,24 @@ Walt is a minimal documentation theme based on [writ.css](https://writ.cmcenroe.
 It features classless styles for semantic HTML and supports light and dark mode
 based on system settings.
 
+## Stylesheet
+
+You can include the Walt stylesheet in your project in the following ways:
+
+- Copy the stylesheet from [GitHub](https://github.com/codesue/walt/blob/main/walt.css)
+
+- Install from npm:
+
+    ```sh
+    npm install --save walt.css
+    ```
+
+- Link to a CDN:
+
+    ```html
+    <link rel="stylesheet" href="https://unpkg.com/walt.css/walt.css" />
+    ```
+
 ## MkDocs theme
 
 Walt is available as an MkDocs theme that features:

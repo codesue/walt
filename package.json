@@ -22,18 +22,20 @@
   "style": "walt.css",
   "files": [
     "LICENSE",
-    "walt.css"
+    "walt.css",
+    "walt.min.css"
   ],
   "scripts": {
     "test": "stylelint walt.css --fix",
-    "build-mkdocs": "cleancss -o mkdocs/walt/walt.min.css walt.css",
-    "dev-mkdocs": "npm run build-mkdocs -- --watch -O0"
+    "minify": "cleancss walt.css --output walt.min.css",
+    "build": "npm run minify && shx cp walt.min.css mkdocs/walt/walt.min.css "
   },
   "stylelint": {
     "extends": "stylelint-config-standard"
   },
   "devDependencies": {
     "clean-css-cli": "^5.6.2",
+    "shx": "^0.3.4",
     "stylelint": "^15.6.3",
     "stylelint-config-standard": "^33.0.0"
   }
